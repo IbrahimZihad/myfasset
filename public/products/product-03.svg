@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Placeholder artwork for product 3">
+  <rect width="1200" height="800" fill="#061A44"/>
+  <rect width="230" height="8" fill="#C8962A"/>
+  <rect x="230" width="970" height="8" fill="#0A2A66"/>
+  <rect x="760" y="120" width="130" height="130" rx="10" fill="#0A2A66" stroke="#1C4180"/>
+  <rect x="910" y="120" width="130" height="130" rx="10" fill="#0A2A66" stroke="#1C4180"/>
+  <rect x="1060" y="120" width="70" height="130" rx="10" fill="#C8962A"/>
+  <rect x="760" y="270" width="130" height="130" rx="10" fill="#0A2A66" stroke="#1C4180"/>
+  <rect x="910" y="270" width="130" height="130" rx="10" fill="#0A2A66" stroke="#1C4180"/>
+  <rect x="1060" y="270" width="70" height="130" rx="10" fill="#0A2A66" stroke="#1C4180"/>
+  <circle cx="975" cy="235" r="230" fill="none" stroke="#C8962A" stroke-width="2" opacity="0.5"/>
+  <rect x="1082" y="68" width="22" height="22" fill="#F3D77A"/>
+  <text x="80" y="625" fill="#F3D77A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">PRODUCT 03</text>
+  <text x="80" y="690" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Placeholder</text>
+  <rect x="80" y="720" width="76" height="6" fill="#C8962A"/>
+  <text x="80" y="756" fill="#8FA1C6" font-family="Inter, Arial, sans-serif" font-size="20">myfasset / SaaS</text>
+</svg>
