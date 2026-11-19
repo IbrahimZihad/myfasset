@@ -92,13 +92,13 @@ const svProducts: SiteContent["products"] = [
 export const content: Record<Locale, SiteContent> = {
   en: {
     meta: {
-      title: "myfasset — Software that ships. Products that last.",
+      title: "MYFASSET — Software that ships. Products that last.",
       description:
-        "myfasset is a Swedish software company in Halmstad building and running SaaS products. Est. 2021. Clear design, reliable engineering and steady releases.",
-      ogAlt: "myfasset — Swedish software company in Halmstad",
+        "MYFASSET is a Swedish software company in Halmstad building and running SaaS products. Est. 2021. Clear design, reliable engineering and steady releases.",
+      ogAlt: "MYFASSET — Swedish software company in Halmstad",
       ogImage: "/og-en.png",
       keywords: [
-        "myfasset",
+        "MYFASSET",
         "SaaS company Sweden",
         "software company Halmstad",
         "SaaS development",
@@ -107,13 +107,13 @@ export const content: Record<Locale, SiteContent> = {
     },
     common: {
       skipToContent: "Skip to content",
-      home: "myfasset — home",
+      home: "MYFASSET — home",
       openMenu: "Open menu",
       closeMenu: "Close menu",
       toggleTheme: "Toggle colour theme",
       language: "Language",
       primaryNav: "Primary navigation",
-      logoAlt: "myfasset logo",
+      logoAlt: "MYFASSET logo",
       newTab: "(opens in a new tab)",
     },
     languageSwitch: {
@@ -148,7 +148,7 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "About us",
       title: "Who we are",
       body: [
-        "myfasset is a software company based in Halmstad, Sweden. Since 2021 we have designed, built and shipped SaaS products for businesses and teams that rely on cloud software every day.",
+        "MYFASSET is a software company based in Halmstad, Sweden. Since 2021 we have designed, built and shipped SaaS products for businesses and teams that rely on cloud software every day.",
         "We believe good software should be clear, dependable and easy to adopt. Our work is shaped by a Scandinavian approach to design: simple, functional and free of clutter.",
       ],
       missionLabel: "Our mission",
@@ -259,7 +259,7 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     why: {
-      kicker: "Why myfasset",
+      kicker: "Why MYFASSET",
       title: "What you can expect from us",
       intro:
         "A small, senior team with a long-term view and no unnecessary layers.",
@@ -320,7 +320,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Tell us what you are working on. We will get back to you as soon as we can.",
       companyLabel: "Company",
-      companyName: "myfasset",
+      companyName: "MYFASSET",
       companyMeta: "Software company · Est. 2021",
       addressLabel: "Address",
       addressCountry: "Sweden",
@@ -356,20 +356,20 @@ export const content: Record<Locale, SiteContent> = {
       exploreLabel: "Explore",
       contactLabel: "Contact",
       addressLabel: "Address",
-      copyright: "© 2026 myfasset",
+      copyright: "© 2026 MYFASSET",
       location: "Halmstad, Sweden",
     },
   },
 
   sv: {
     meta: {
-      title: "myfasset — Mjukvara som levererar. Produkter som håller.",
+      title: "MYFASSET — Mjukvara som levererar. Produkter som håller.",
       description:
-        "myfasset är ett svenskt mjukvaruföretag i Halmstad som bygger och driver SaaS-produkter. Grundat 2021. Tydlig design, pålitlig teknik och regelbundna releaser.",
-      ogAlt: "myfasset — svenskt mjukvaruföretag i Halmstad",
+        "MYFASSET är ett svenskt mjukvaruföretag i Halmstad som bygger och driver SaaS-produkter. Grundat 2021. Tydlig design, pålitlig teknik och regelbundna releaser.",
+      ogAlt: "MYFASSET — svenskt mjukvaruföretag i Halmstad",
       ogImage: "/og-sv.png",
       keywords: [
-        "myfasset",
+        "MYFASSET",
         "SaaS-företag Sverige",
         "mjukvaruföretag Halmstad",
         "SaaS-utveckling",
@@ -378,13 +378,13 @@ export const content: Record<Locale, SiteContent> = {
     },
     common: {
       skipToContent: "Hoppa till innehållet",
-      home: "myfasset — startsida",
+      home: "MYFASSET — startsida",
       openMenu: "Öppna meny",
       closeMenu: "Stäng meny",
       toggleTheme: "Byt färgtema",
       language: "Språk",
       primaryNav: "Huvudmeny",
-      logoAlt: "myfasset logotyp",
+      logoAlt: "MYFASSET logotyp",
       newTab: "(öppnas i en ny flik)",
     },
     languageSwitch: {
@@ -419,7 +419,7 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "Om oss",
       title: "Vilka vi är",
       body: [
-        "myfasset är ett mjukvaruföretag i Halmstad. Sedan 2021 har vi utformat, byggt och levererat SaaS-produkter till företag och team som använder molnbaserad mjukvara varje dag.",
+        "MYFASSET är ett mjukvaruföretag i Halmstad. Sedan 2021 har vi utformat, byggt och levererat SaaS-produkter till företag och team som använder molnbaserad mjukvara varje dag.",
         "Vi tror att bra mjukvara ska vara tydlig, pålitlig och lätt att ta till sig. Vårt arbete formas av en skandinavisk syn på design: enkel, funktionell och fri från krångel.",
       ],
       missionLabel: "Vårt uppdrag",
@@ -530,7 +530,7 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     why: {
-      kicker: "Varför myfasset",
+      kicker: "Varför MYFASSET",
       title: "Det kan du förvänta dig av oss",
       intro:
         "Ett litet, erfaret team med långsiktig blick och utan onödiga lager.",
@@ -591,7 +591,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Berätta vad du arbetar med. Vi återkommer så snart vi kan.",
       companyLabel: "Företag",
-      companyName: "myfasset",
+      companyName: "MYFASSET",
       companyMeta: "Mjukvaruföretag · Grundat 2021",
       addressLabel: "Adress",
       addressCountry: "Sverige",
@@ -627,7 +627,7 @@ export const content: Record<Locale, SiteContent> = {
       exploreLabel: "Utforska",
       contactLabel: "Kontakt",
       addressLabel: "Adress",
-      copyright: "© 2026 myfasset",
+      copyright: "© 2026 MYFASSET",
       location: "Halmstad, Sverige",
     },
   },

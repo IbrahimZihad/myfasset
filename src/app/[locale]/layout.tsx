@@ -135,7 +135,7 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${site.url}/#organization`,
-    name: "myfasset",
+    name: "MYFASSET",
     url: site.url,
     logo: {
       "@type": "ImageObject",
@@ -173,7 +173,7 @@ export default async function LocaleLayout({
     "@type": "WebSite",
     "@id": `${site.url}/#website`,
     url: site.url,
-    name: "myfasset",
+    name: "MYFASSET",
     inLanguage: ["en", "sv"],
     publisher: { "@id": `${site.url}/#organization` },
   };
