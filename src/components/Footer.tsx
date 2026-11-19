@@ -89,11 +89,15 @@ export function Footer({ locale }: { locale: Locale }) {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                   {t.contact.emailLabel}
                 </p>
-                <p className="mt-1.5">{site.email}</p>
+                <a className="mt-1.5 block hover:text-gold-light" href={`mailto:${site.email}`}>
+                  {site.email}
+                </a>
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                   {t.contact.phoneLabel}
                 </p>
-                <p className="mt-1.5">{site.phone}</p>
+                <a className="mt-1.5 block hover:text-gold-light" href={`tel:${site.phone}`}>
+                  {site.phone}
+                </a>
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">

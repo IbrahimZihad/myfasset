@@ -144,6 +144,8 @@ export default async function LocaleLayout({
       height: 581,
     },
     foundingDate: site.founded,
+    email: site.email,
+    telephone: site.phone,
     founder: {
       "@type": "Person",
       name: t.leadership.name,

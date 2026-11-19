@@ -88,13 +88,23 @@ export function Contact({ locale }: { locale: Locale }) {
                     <p className="text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-gold-light">
                       {t.contact.emailLabel}
                     </p>
-                    <p className="mt-2 text-sm text-white/85">{site.email}</p>
+                    <a
+                      href={`mailto:${site.email}`}
+                      className="mt-2 block text-sm text-white/85 hover:text-gold-light"
+                    >
+                      {site.email}
+                    </a>
                   </div>
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-gold-light">
                       {t.contact.phoneLabel}
                     </p>
-                    <p className="mt-2 text-sm text-white/85">{site.phone}</p>
+                    <a
+                      href={`tel:${site.phone}`}
+                      className="mt-2 block text-sm text-white/85 hover:text-gold-light"
+                    >
+                      {site.phone}
+                    </a>
                   </div>
                 </div>
               </div>

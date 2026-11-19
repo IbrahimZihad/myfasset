@@ -28,8 +28,8 @@ export const site = {
     country: "Sweden",
     countryCode: "SE",
   },
-  email: "[email]",
-  phone: "[phone]",
+  email: "infomyfasset@gmail.com",
+  phone: "0700079377",
   mapUrl:
     "https://www.google.com/maps/search/?api=1&query=Nyv%C3%A5ngen%2016A%2C%20302%2057%20Halmstad%2C%20Sweden",
   ceoPhoto: "/ashraful-alam.png",
