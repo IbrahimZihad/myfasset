@@ -21,7 +21,7 @@ export function localePath(locale: Locale, path = ""): string {
 
 /**
  * Keeps the reader on the same page when switching language.
- * /en/products/product-one -> /sv/products/product-one
+ * /en/products/saloon-sweden -> /sv/products/saloon-sweden
  */
 export function switchLocalePath(pathname: string, target: Locale): string {
   const parts = pathname.split("/").filter(Boolean);

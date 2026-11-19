@@ -4,9 +4,10 @@ Bilingual (English / Swedish) marketing website for **myfasset**, a Swedish SaaS
 company in Halmstad. Built with Next.js App Router, TypeScript and Tailwind CSS,
 based on the supplied company booklet.
 
-The site ships with **placeholder content where real company details were not
-provided**. No clients, awards, statistics or testimonials have been invented.
-See [Replacing placeholders](#replacing-placeholders).
+The site ships with **placeholder contact details and leadership bio** where real
+company information was not provided. No clients, awards, statistics or
+testimonials have been invented. See
+[Replacing placeholders](#replacing-placeholders).
 
 ---
 
@@ -64,12 +65,15 @@ npm run start
 | ---------------------------------- | -------------------------------- |
 | `/`                                | Redirects to `/en`               |
 | `/en`, `/sv`                       | Localized one-page home          |
-| `/en/products/product-one` etc.    | Product detail template          |
-| `/sv/products/product-one` etc.    | Swedish product detail template  |
+| `/en/products/saloon-sweden` etc.  | 308 redirect to the live product |
+| `/sv/products/my-sweet-desserts`   | 308 redirect to the live product |
 | `/sitemap.xml`, `/robots.txt`      | Generated SEO routes             |
 | `/manifest.webmanifest`            | Web app manifest                 |
 
-Unknown product slugs and unknown locales return the localized 404 page.
+Product cards link directly to the live sites in a new tab. The
+`/[locale]/products/[slug]` routes remain as permanent redirects so old links
+keep working. Unknown product slugs and unknown locales return the localized
+404 page.
 
 ---
 
@@ -85,8 +89,8 @@ It contains:
   - navigation labels, header CTA
   - hero, about, strengths, principles, products intro
   - process, why-us, tech stack, leadership, contact, footer
-  - products (3 entries per locale)
-  - product detail labels and form copy
+  - products (2 entries per locale, each with a live URL)
+  - contact form copy
 
 Update both `en` and `sv` when changing shared content. The TypeScript types in
 `src/lib/types.ts` will flag missing fields at build time.
@@ -104,7 +108,7 @@ update the corresponding `id` in its component and the nav entries.
 Search the project for `[` and for `Placeholder`:
 
 ```bash
-grep -rn "Placeholder\|\[email\]\|\[phone\]\|\[Short bio" src public
+grep -rn "\[email\]\|\[phone\]\|placeholder" src
 ```
 
 ### 1. Contact details
@@ -132,23 +136,29 @@ unless a new photo is provided.
 
 ### 3. Products
 
-All three products (`product-one`, `product-two`, `product-three`) are
-placeholders. They are marked with a **Placeholder** badge in the UI and on
-their detail pages.
+The site currently lists two live products:
 
-For each product, replace:
+| Product            | Live site                                      | Card image                                  |
+| ------------------ | ---------------------------------------------- | ------------------------------------------- |
+| Saloon Sweden      | https://saloon-sweden.vercel.app/              | `public/products/saloon-sweden.jpg`         |
+| My Sweet Desserts  | https://my-sweet-desserts.onrender.com/        | `public/products/my-sweet-desserts.jpg`     |
 
-- `slug`, `name`, `tagline`, `status` (`live` / `beta` / `coming-soon`)
-- `placeholder: true` → remove the flag (and the badge disappears)
-- `cover`, `coverAlt`, `tags`
-- `overview`, `features`, `screenshots`, `metaDescription`
+Each entry in `content.en.products` / `content.sv.products` has:
 
-The current covers and screenshots are abstract SVG placeholders in
-`public/products/`. Replace them with real images (`.webp` / `.avif` / `.png`)
-and update the paths, alt text and captions.
+- `slug` — used only by the legacy redirect route
+- `name`, `tagline`, `status` (`live` / `beta` / `coming-soon`)
+- `cover`, `coverAlt` — the card image and its alt text
+- `tags`
+- `url` — the live site opened by the card (new tab)
 
-If you change a slug, the route is generated automatically; update any links.
-To ship fewer products, remove entries from both locale arrays.
+The cards are `16:9` and use `object-cover`, so use a wide screenshot or hero
+image (roughly 1200×675 or larger). Replace a product by editing both locale
+entries and swapping the image; the redirect updates automatically. To add a
+product, add it to both arrays. To remove one, delete it from both arrays.
+
+If a product should open an internal page instead of an external site, change
+the card link and remove the redirect in
+`src/app/[locale]/products/[slug]/page.tsx`.
 
 ### 4. Site URL
 
@@ -241,8 +251,9 @@ If no choice is stored, the OS `prefers-color-scheme` is used.
 
 ## Accessibility and motion
 
-- Targets WCAG 2.1 AA; axe reports 0 violations on the home page (light, dark,
-  English, Swedish), a product page and the open mobile menu
+- Targets WCAG 2.1 AA; axe reports 0 violations on the home page across light,
+  dark, English, Swedish and mobile layouts
+- Product cards are single links with clear names, alt text and a new-tab note
 - Skip link, visible focus styles, semantic landmarks and heading order
 - Keyboard-operable mobile menu and language switcher; Escape closes the menu
 - All images have alt text; decorative graphics are `aria-hidden`
@@ -283,7 +294,10 @@ details in `src/app/[locale]/layout.tsx` before launch.
    - `/` redirects to `/en`
    - `/en` and `/sv` load with the correct `lang`
    - `/sitemap.xml` and `/robots.txt` use the production domain
-   - a product page loads and its 404 works for unknown slugs
+   - both product cards open their live sites in a new tab
+   - `/en/products/saloon-sweden` and `/sv/products/my-sweet-desserts` redirect
+     to the matching live site
+   - unknown product slugs return 404
    - the contact form is either connected or clearly still labelled as a template
 
 Any Node.js host works as well (`npm run build` + `npm run start`). The site is
@@ -296,11 +310,12 @@ fully static, so it can also be exported if that is preferred.
 Checks performed on the production build:
 
 - `npm run build`, `npm run typecheck`: pass
-- Lighthouse (mobile, simulated throttling): **Performance 96,
+- Lighthouse (mobile, simulated throttling): **Performance 97,
   Accessibility 100, Best Practices 100, SEO 100**; desktop 100 across all four
   categories
-- axe WCAG 2.1 AA: 0 violations across EN/SV, light/dark, desktop/mobile, product
-  page and open mobile menu
+- axe WCAG 2.1 AA: 0 violations on the home page in EN/SV, light/dark and mobile
+- Product cards link to the correct live URLs with `target="_blank"` and
+  `rel="noopener noreferrer"`; legacy product URLs return `308` to the live sites
 - No horizontal overflow at 360, 390, 768, 1024, 1280 and 1440 px
 - Keyboard: skip link, mobile menu (focus trap/Escape), theme toggle, language
   switch and form validation verified
@@ -309,6 +324,7 @@ Checks performed on the production build:
 
 ## Source material
 
-The supplied PDFs (`myfasset-company-booklet.pdf`,
-`myfasset-foretagsbroschyr-sv.pdf`) are kept at the repository root as design and
-copy references. They are not served by the site.
+The supplied reference documents live in `DOCUMENTs/`:
+`myfasset-company-booklet.pdf`, `myfasset-foretagsbroschyr-sv.pdf` and the
+business-card PDFs. They are design and copy references and are not served by
+the site.

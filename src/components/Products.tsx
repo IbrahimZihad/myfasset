@@ -22,7 +22,7 @@ export function Products({ locale }: { locale: Locale }) {
           />
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:gap-6">
           {t.products.map((product, index) => (
             <div
               key={product.slug}
@@ -31,26 +31,14 @@ export function Products({ locale }: { locale: Locale }) {
               className="h-full"
             >
               <ProductCard
-                locale={locale}
                 product={product}
                 statusLabel={t.productsSection.statusLabels[product.status]}
-                placeholderLabel={t.productsSection.placeholderBadge}
-                learnMore={t.productsSection.learnMore}
+                visitLabel={t.productsSection.visitSite}
+                newTabLabel={t.common.newTab}
               />
             </div>
           ))}
         </div>
-
-        <p
-          className="mt-8 flex items-start gap-3 text-sm leading-relaxed text-muted"
-          data-reveal
-        >
-          <span
-            aria-hidden="true"
-            className="mt-1.5 block h-2 w-2 shrink-0 bg-gold"
-          />
-          <span>{t.productsSection.placeholderNote}</span>
-        </p>
       </div>
     </section>
   );

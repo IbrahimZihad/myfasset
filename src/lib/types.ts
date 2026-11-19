@@ -28,30 +28,15 @@ export interface PrincipleItem {
   icon: PrincipleIcon;
 }
 
-export interface ProductFeature {
-  title: string;
-  description: string;
-}
-
-export interface ProductScreenshot {
-  src: string;
-  alt: string;
-  caption: string;
-}
-
 export interface Product {
   slug: string;
   name: string;
   tagline: string;
   status: ProductStatus;
-  placeholder: boolean;
   cover: string;
   coverAlt: string;
   tags: string[];
-  overview: string[];
-  features: ProductFeature[];
-  screenshots: ProductScreenshot[];
-  metaDescription: string;
+  url: string;
 }
 
 export interface FormCopy {
@@ -138,26 +123,10 @@ export interface SiteContent {
     kicker: string;
     title: string;
     intro: string;
-    placeholderNote: string;
-    learnMore: string;
+    visitSite: string;
     statusLabels: Record<ProductStatus, string>;
-    placeholderBadge: string;
   };
   products: Product[];
-  productPage: {
-    eyebrow: string;
-    back: string;
-    overview: string;
-    features: string;
-    screenshots: string;
-    details: string;
-    status: string;
-    tags: string;
-    ctaTitle: string;
-    ctaText: string;
-    ctaButton: string;
-    placeholderNote: string;
-  };
   process: {
     kicker: string;
     title: string;

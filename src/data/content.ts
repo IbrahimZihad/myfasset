@@ -6,8 +6,8 @@ import type { Locale, SiteContent } from "@/lib/types";
  * ---------------------------------------------------------------------------
  * Everything shown on the website lives in this one file: navigation, copy,
  * products, strengths, principles, process, tech stack, leadership and contact
- * details. Update English and Swedish together, then replace the placeholder
- * products (names, copy, tags, images) with real ones.
+ * details. Update English and Swedish together. Each product uses a cover image
+ * and links straight to its live site.
  * ---------------------------------------------------------------------------
  */
 
@@ -37,283 +37,55 @@ export const site = {
 
 const enProducts: SiteContent["products"] = [
   {
-    slug: "product-one",
-    name: "Product One",
-    tagline: "[One-line value statement for your first SaaS product.]",
+    slug: "saloon-sweden",
+    name: "Saloon Sweden",
+    tagline:
+      "A calm oasis in the heart of the city — Scandinavian precision, care for detail and time for you.",
     status: "live",
-    placeholder: true,
-    cover: "/products/product-01.svg",
-    coverAlt: "Abstract placeholder artwork for Product One",
-    tags: ["SaaS", "Placeholder"],
-    overview: [
-      "[Product overview placeholder — explain the problem this product solves, who it is for, and the outcome it delivers.]",
-      "[Second paragraph placeholder — add positioning, context or a short proof point. Keep it concise and specific.]",
-    ],
-    features: [
-      {
-        title: "[Key feature one]",
-        description: "[What it does and why it matters to the people using it.]",
-      },
-      {
-        title: "[Key feature two]",
-        description: "[Describe the workflow it improves or the friction it removes.]",
-      },
-      {
-        title: "[Key feature three]",
-        description: "[Describe the integration, insight or automation it enables.]",
-      },
-      {
-        title: "[Key feature four]",
-        description: "[Describe the reliability, security or support benefit.]",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/products/product-01-shot-1.svg",
-        alt: "Placeholder dashboard screenshot for Product One",
-        caption: "Screenshot placeholder 1",
-      },
-      {
-        src: "/products/product-01-shot-2.svg",
-        alt: "Placeholder detail view screenshot for Product One",
-        caption: "Screenshot placeholder 2",
-      },
-    ],
-    metaDescription:
-      "[Product meta description placeholder — summarise the product and its value in one sentence.]",
+    cover: "/products/saloon-sweden.jpg",
+    coverAlt:
+      "Saloon Sweden website showing a monochrome salon interior and the heading “The art of feeling good”",
+    tags: ["Website", "Online booking", "Hair salon"],
+    url: "https://saloon-sweden.vercel.app/",
   },
   {
-    slug: "product-two",
-    name: "Product Two",
-    tagline: "[One-line value statement for your second SaaS product.]",
-    status: "beta",
-    placeholder: true,
-    cover: "/products/product-02.svg",
-    coverAlt: "Abstract placeholder artwork for Product Two",
-    tags: ["SaaS", "Beta", "Placeholder"],
-    overview: [
-      "[Product overview placeholder — describe the customer, the core problem and what makes this product useful.]",
-      "[Second paragraph placeholder — add a short note about the product's current status or roadmap.]",
-    ],
-    features: [
-      {
-        title: "[Key feature one]",
-        description: "[What it does and why it matters to the people using it.]",
-      },
-      {
-        title: "[Key feature two]",
-        description: "[Describe the workflow it improves or the friction it removes.]",
-      },
-      {
-        title: "[Key feature three]",
-        description: "[Describe the integration, insight or automation it enables.]",
-      },
-      {
-        title: "[Key feature four]",
-        description: "[Describe the reliability, security or support benefit.]",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/products/product-02-shot-1.svg",
-        alt: "Placeholder dashboard screenshot for Product Two",
-        caption: "Screenshot placeholder 1",
-      },
-      {
-        src: "/products/product-02-shot-2.svg",
-        alt: "Placeholder detail view screenshot for Product Two",
-        caption: "Screenshot placeholder 2",
-      },
-    ],
-    metaDescription:
-      "[Product meta description placeholder — summarise the product and its value in one sentence.]",
-  },
-  {
-    slug: "product-three",
-    name: "Product Three",
-    tagline: "[One-line value statement for an upcoming SaaS product.]",
-    status: "coming-soon",
-    placeholder: true,
-    cover: "/products/product-03.svg",
-    coverAlt: "Abstract placeholder artwork for Product Three",
-    tags: ["SaaS", "Coming soon", "Placeholder"],
-    overview: [
-      "[Product overview placeholder — describe the idea, the audience and the problem it will solve.]",
-      "[Second paragraph placeholder — explain what is being developed and how readers can follow progress.]",
-    ],
-    features: [
-      {
-        title: "[Planned feature one]",
-        description: "[What it will do and why it matters.]",
-      },
-      {
-        title: "[Planned feature two]",
-        description: "[Describe the workflow it will improve.]",
-      },
-      {
-        title: "[Planned feature three]",
-        description: "[Describe the integration, insight or automation it will enable.]",
-      },
-      {
-        title: "[Planned feature four]",
-        description: "[Describe the reliability, security or support benefit.]",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/products/product-03-shot-1.svg",
-        alt: "Placeholder concept screenshot for Product Three",
-        caption: "Screenshot placeholder 1",
-      },
-      {
-        src: "/products/product-03-shot-2.svg",
-        alt: "Placeholder concept detail screenshot for Product Three",
-        caption: "Screenshot placeholder 2",
-      },
-    ],
-    metaDescription:
-      "[Product meta description placeholder — summarise the upcoming product and its value.]",
+    slug: "my-sweet-desserts",
+    name: "My Sweet Desserts",
+    tagline:
+      "Small-batch celebration cakes, baked in Brunswick — order online, then pick up boxed and chilled.",
+    status: "live",
+    cover: "/products/my-sweet-desserts.jpg",
+    coverAlt:
+      "My Sweet Desserts website with a pink gradient card and the heading “A cake worth clearing your calendar for”",
+    tags: ["Website", "Online ordering", "Bakery"],
+    url: "https://my-sweet-desserts.onrender.com/",
   },
 ];
 
 const svProducts: SiteContent["products"] = [
   {
-    slug: "product-one",
-    name: "Produkt ett",
-    tagline: "[En rad som förklarar värdet med din första SaaS-produkt.]",
+    slug: "saloon-sweden",
+    name: "Saloon Sweden",
+    tagline:
+      "En lugn oas i hjärtat av staden — skandinavisk precision, omtanke om detaljer och tid för dig.",
     status: "live",
-    placeholder: true,
-    cover: "/products/product-01.svg",
-    coverAlt: "Abstrakt platshållarbild för Produkt ett",
-    tags: ["SaaS", "Platshållare"],
-    overview: [
-      "[Översikt över produkten — förklara problemet den löser, vem den är för och vilket resultat den ger.]",
-      "[Andra stycket — lägg till positionering, sammanhang eller ett kort belägg. Håll det koncist och konkret.]",
-    ],
-    features: [
-      {
-        title: "[Nyckelfunktion ett]",
-        description: "[Vad den gör och varför den är viktig för användarna.]",
-      },
-      {
-        title: "[Nyckelfunktion två]",
-        description: "[Beskriv arbetsflödet den förbättrar eller friktionen den tar bort.]",
-      },
-      {
-        title: "[Nyckelfunktion tre]",
-        description: "[Beskriv integrationen, insikten eller automatiseringen den möjliggör.]",
-      },
-      {
-        title: "[Nyckelfunktion fyra]",
-        description: "[Beskriv nyttan inom tillförlitlighet, säkerhet eller support.]",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/products/product-01-shot-1.svg",
-        alt: "Platshållarbild av översikten för Produkt ett",
-        caption: "Skärmbildsplatshållare 1",
-      },
-      {
-        src: "/products/product-01-shot-2.svg",
-        alt: "Platshållarbild av detaljvyn för Produkt ett",
-        caption: "Skärmbildsplatshållare 2",
-      },
-    ],
-    metaDescription:
-      "[Metabeskrivning för produkten — sammanfatta produkten och dess värde i en mening.]",
+    cover: "/products/saloon-sweden.jpg",
+    coverAlt:
+      "Saloon Swedens webbplats med en monokrom salongsmiljö och rubriken “The art of feeling good”",
+    tags: ["Webbplats", "Onlinebokning", "Frisörsalong"],
+    url: "https://saloon-sweden.vercel.app/",
   },
   {
-    slug: "product-two",
-    name: "Produkt två",
-    tagline: "[En rad som förklarar värdet med din andra SaaS-produkt.]",
-    status: "beta",
-    placeholder: true,
-    cover: "/products/product-02.svg",
-    coverAlt: "Abstrakt platshållarbild för Produkt två",
-    tags: ["SaaS", "Beta", "Platshållare"],
-    overview: [
-      "[Översikt över produkten — beskriv kunden, kärnproblemet och vad som gör produkten användbar.]",
-      "[Andra stycket — lägg till en kort notis om produktens nuvarande status eller plan.]",
-    ],
-    features: [
-      {
-        title: "[Nyckelfunktion ett]",
-        description: "[Vad den gör och varför den är viktig för användarna.]",
-      },
-      {
-        title: "[Nyckelfunktion två]",
-        description: "[Beskriv arbetsflödet den förbättrar eller friktionen den tar bort.]",
-      },
-      {
-        title: "[Nyckelfunktion tre]",
-        description: "[Beskriv integrationen, insikten eller automatiseringen den möjliggör.]",
-      },
-      {
-        title: "[Nyckelfunktion fyra]",
-        description: "[Beskriv nyttan inom tillförlitlighet, säkerhet eller support.]",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/products/product-02-shot-1.svg",
-        alt: "Platshållarbild av översikten för Produkt två",
-        caption: "Skärmbildsplatshållare 1",
-      },
-      {
-        src: "/products/product-02-shot-2.svg",
-        alt: "Platshållarbild av detaljvyn för Produkt två",
-        caption: "Skärmbildsplatshållare 2",
-      },
-    ],
-    metaDescription:
-      "[Metabeskrivning för produkten — sammanfatta produkten och dess värde i en mening.]",
-  },
-  {
-    slug: "product-three",
-    name: "Produkt tre",
-    tagline: "[En rad som förklarar värdet med en kommande SaaS-produkt.]",
-    status: "coming-soon",
-    placeholder: true,
-    cover: "/products/product-03.svg",
-    coverAlt: "Abstrakt platshållarbild för Produkt tre",
-    tags: ["SaaS", "Kommande", "Platshållare"],
-    overview: [
-      "[Översikt över produkten — beskriv idén, målgruppen och problemet den ska lösa.]",
-      "[Andra stycket — förklara vad som utvecklas och hur läsaren kan följa arbetet.]",
-    ],
-    features: [
-      {
-        title: "[Planerad funktion ett]",
-        description: "[Vad den ska göra och varför den är viktig.]",
-      },
-      {
-        title: "[Planerad funktion två]",
-        description: "[Beskriv arbetsflödet den ska förbättra.]",
-      },
-      {
-        title: "[Planerad funktion tre]",
-        description: "[Beskriv integrationen, insikten eller automatiseringen den ska möjliggöra.]",
-      },
-      {
-        title: "[Planerad funktion fyra]",
-        description: "[Beskriv nyttan inom tillförlitlighet, säkerhet eller support.]",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/products/product-03-shot-1.svg",
-        alt: "Platshållarbild av konceptet för Produkt tre",
-        caption: "Skärmbildsplatshållare 1",
-      },
-      {
-        src: "/products/product-03-shot-2.svg",
-        alt: "Platshållarbild av konceptdetaljen för Produkt tre",
-        caption: "Skärmbildsplatshållare 2",
-      },
-    ],
-    metaDescription:
-      "[Metabeskrivning för den kommande produkten — sammanfatta idén och dess värde.]",
+    slug: "my-sweet-desserts",
+    name: "My Sweet Desserts",
+    tagline:
+      "Tårtor bakade i små satser i Brunswick — beställ online och hämta, packade och kylda.",
+    status: "live",
+    cover: "/products/my-sweet-desserts.jpg",
+    coverAlt:
+      "My Sweet Desserts webbplats med ett rosa gradientkort och rubriken “A cake worth clearing your calendar for”",
+    tags: ["Webbplats", "Onlinebeställning", "Bageri"],
+    url: "https://my-sweet-desserts.onrender.com/",
   },
 ];
 
@@ -448,34 +220,15 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "Our products",
       title: "Built in-house. Made to be used.",
       intro:
-        "A focused portfolio of SaaS products, built and run by the same team. The three entries below are placeholders for real products.",
-      placeholderNote:
-        "Placeholder products — replace names, copy, tags and imagery in the content file.",
-      learnMore: "Learn more",
+        "A focused portfolio of digital products, built and run by the same team. Visit each live site to see it in action.",
+      visitSite: "Visit website",
       statusLabels: {
         live: "Live",
         beta: "Beta",
         "coming-soon": "Coming soon",
       },
-      placeholderBadge: "Placeholder",
     },
     products: enProducts,
-    productPage: {
-      eyebrow: "Product",
-      back: "Back to products",
-      overview: "Overview",
-      features: "Key features",
-      screenshots: "Screenshots",
-      details: "Product details",
-      status: "Status",
-      tags: "Tags",
-      ctaTitle: "Want to know more?",
-      ctaText:
-        "This product page is a template. Real product details will be published when the product is ready.",
-      ctaButton: "Talk to us",
-      placeholderNote:
-        "Placeholder content — replace this page in the content file.",
-    },
     process: {
       kicker: "Our approach",
       title: "From idea to live product",
@@ -738,34 +491,15 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "Våra produkter",
       title: "Byggda in-house. Skapade att användas.",
       intro:
-        "En fokuserad portfölj av SaaS-produkter, byggda och drivna av samma team. De tre nedan är platshållare för riktiga produkter.",
-      placeholderNote:
-        "Platshållarprodukter — ersätt namn, text, taggar och bilder i innehållsfilen.",
-      learnMore: "Läs mer",
+        "En fokuserad portfölj av digitala produkter, byggda och drivna av samma team. Besök varje live-sajt för att se den i praktiken.",
+      visitSite: "Besök webbplatsen",
       statusLabels: {
         live: "Live",
         beta: "Beta",
         "coming-soon": "Kommande",
       },
-      placeholderBadge: "Platshållare",
     },
     products: svProducts,
-    productPage: {
-      eyebrow: "Produkt",
-      back: "Tillbaka till produkter",
-      overview: "Översikt",
-      features: "Nyckelfunktioner",
-      screenshots: "Skärmbilder",
-      details: "Produktinformation",
-      status: "Status",
-      tags: "Taggar",
-      ctaTitle: "Vill du veta mer?",
-      ctaText:
-        "Den här produktsidan är en mall. Riktig produktinformation publiceras när produkten är redo.",
-      ctaButton: "Prata med oss",
-      placeholderNote:
-        "Platshållarinnehåll — uppdatera den här sidan i innehållsfilen.",
-    },
     process: {
       kicker: "Vårt arbetssätt",
       title: "Från idé till lanserad produkt",
