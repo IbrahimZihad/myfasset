@@ -62,6 +62,12 @@ export async function generateMetadata({
     creator: "MYFASSET",
     publisher: "MYFASSET",
     category: "technology",
+    referrer: "origin-when-cross-origin",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
     alternates: {
       canonical: path,
       languages: {
@@ -76,7 +82,7 @@ export async function generateMetadata({
       url: path,
       siteName: "MYFASSET",
       locale: locale === "sv" ? "sv_SE" : "en_US",
-      title: t.meta.title,
+      title: t.meta.ogTitle,
       description: t.meta.description,
       images: [
         {
@@ -89,13 +95,20 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: t.meta.title,
+      title: t.meta.ogTitle,
       description: t.meta.description,
       images: [t.meta.ogImage],
     },
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }
@@ -146,10 +159,22 @@ export default async function LocaleLayout({
     foundingDate: site.founded,
     email: site.email,
     telephone: site.phone,
+    slogan: locale === "sv"
+      ? "Digitala lösningar för en smartare framtid"
+      : "Digital solutions for a smarter future",
     founder: {
       "@type": "Person",
+      "@id": `${site.url}/#founder`,
       name: t.leadership.name,
       jobTitle: t.leadership.role,
+      email: site.email,
+      telephone: site.phone,
+      image: `${site.url}${site.ceoPhoto}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.address.city,
+        addressCountry: site.address.countryCode,
+      },
     },
     address: {
       "@type": "PostalAddress",
@@ -178,6 +203,18 @@ export default async function LocaleLayout({
     name: "MYFASSET",
     inLanguage: ["en", "sv"],
     publisher: { "@id": `${site.url}/#organization` },
+  };
+
+  const webPage = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${site.url}/${locale}#webpage`,
+    url: `${site.url}/${locale}`,
+    name: t.meta.title,
+    description: t.meta.description,
+    inLanguage: locale === "sv" ? "sv-SE" : "en-US",
+    isPartOf: { "@id": `${site.url}/#website` },
+    about: { "@id": `${site.url}/#organization` },
   };
 
   return (
@@ -225,7 +262,7 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([organization, website]),
+            __html: JSON.stringify([organization, website, webPage]),
           }}
         />
       </body>

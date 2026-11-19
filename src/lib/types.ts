@@ -63,6 +63,7 @@ export interface FormCopy {
 export interface SiteContent {
   meta: {
     title: string;
+    ogTitle: string;
     description: string;
     ogAlt: string;
     ogImage: string;

@@ -93,8 +93,9 @@ export const content: Record<Locale, SiteContent> = {
   en: {
     meta: {
       title: "MYFASSET — Software that ships. Products that last.",
+      ogTitle: "MYFASSET | SaaS Development & Custom Software in Sweden",
       description:
-        "MYFASSET is a Swedish software company in Halmstad building and running SaaS products. Est. 2021. Clear design, reliable engineering and steady releases.",
+        "MYFASSET is a Halmstad-based Swedish software company delivering SaaS development, web applications, mobile apps and custom software solutions.",
       ogAlt: "MYFASSET — Swedish software company in Halmstad",
       ogImage: "/og-en.png",
       keywords: [
@@ -364,8 +365,9 @@ export const content: Record<Locale, SiteContent> = {
   sv: {
     meta: {
       title: "MYFASSET — Mjukvara som levererar. Produkter som håller.",
+      ogTitle: "MYFASSET | SaaS-utveckling och skräddarsydd mjukvara i Sverige",
       description:
-        "MYFASSET är ett svenskt mjukvaruföretag i Halmstad som bygger och driver SaaS-produkter. Grundat 2021. Tydlig design, pålitlig teknik och regelbundna releaser.",
+        "MYFASSET är ett mjukvaruföretag i Halmstad som levererar SaaS-utveckling, webbapplikationer, mobilappar och skräddarsydda mjukvarulösningar.",
       ogAlt: "MYFASSET — svenskt mjukvaruföretag i Halmstad",
       ogImage: "/og-sv.png",
       keywords: [
