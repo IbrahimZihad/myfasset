@@ -16,11 +16,11 @@ const siteUrl = (
 ).replace(/\/$/, "");
 
 export const site = {
-  name: "myfasset",
+  name: "MYFASSET",
   url: siteUrl,
   founded: "2021",
   logo: "/myfasset-logo.png",
-  logoAlt: "myfasset logo",
+  logoAlt: "MYFASSET logo",
   address: {
     street: "Nyvången 16A, LGH 1102",
     postalCode: "302 57",
@@ -311,7 +311,7 @@ export const content: Record<Locale, SiteContent> = {
       name: "Ashraful Alam",
       role: "CEO & Founder",
       location: "Halmstad, Sweden",
-      bio: "[Short bio placeholder — introduce Ashraful's background, what he focuses on at myfasset and how to reach him.]",
+      bio: "As the Founder & CEO of MYFASSET, my vision is to build innovative technology solutions that empower businesses to grow and succeed in the digital world. We focus on SaaS development, web applications, mobile apps and custom software solutions. Our mission is to simplify business operations through smart, scalable and user-friendly technology. At MYFASSET, we turn ideas into digital solutions for a smarter future.",
       photoAlt: "Portrait of Ashraful Alam",
     },
     contact: {
@@ -582,7 +582,7 @@ export const content: Record<Locale, SiteContent> = {
       name: "Ashraful Alam",
       role: "VD och grundare",
       location: "Halmstad, Sverige",
-      bio: "[Kort biografi — presentera Ashrafuls bakgrund, vad han fokuserar på på myfasset och hur man når honom.]",
+      bio: "Som grundare och VD för MYFASSET är min vision att utveckla innovativa teknologilösningar som hjälper företag att växa och lyckas i den digitala världen. Vi fokuserar på SaaS-utveckling, webbapplikationer, mobilappar och skräddarsydda mjukvarulösningar. Vårt uppdrag är att förenkla affärsverksamheten genom smart, skalbar och användarvänlig teknik. På MYFASSET förvandlar vi idéer till digitala lösningar för en smartare framtid.",
       photoAlt: "Porträtt av Ashraful Alam",
     },
     contact: {

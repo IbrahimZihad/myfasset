@@ -53,14 +53,14 @@ export async function generateMetadata({
     metadataBase: new URL(site.url),
     title: {
       default: t.meta.title,
-      template: "%s · myfasset",
+      template: "%s · MYFASSET",
     },
     description: t.meta.description,
     keywords: t.meta.keywords,
-    applicationName: "myfasset",
-    authors: [{ name: "myfasset" }],
-    creator: "myfasset",
-    publisher: "myfasset",
+    applicationName: "MYFASSET",
+    authors: [{ name: "MYFASSET" }],
+    creator: "MYFASSET",
+    publisher: "MYFASSET",
     category: "technology",
     alternates: {
       canonical: path,
@@ -74,7 +74,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: path,
-      siteName: "myfasset",
+      siteName: "MYFASSET",
       locale: locale === "sv" ? "sv_SE" : "en_US",
       title: t.meta.title,
       description: t.meta.description,

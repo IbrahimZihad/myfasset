@@ -3,8 +3,8 @@ import { content } from "@/data/content";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "myfasset",
-    short_name: "myfasset",
+    name: "MYFASSET",
+    short_name: "MYFASSET",
     description: content.en.meta.description,
     start_url: "/en",
     scope: "/",
